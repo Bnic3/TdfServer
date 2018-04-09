@@ -11,7 +11,7 @@ var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
 var wallet;
 router.get('/light',(req,res)=>{
     web3.eth.getCoinbase().then((address)=>{
-        return web3.eth.getBalance(address)
+        return web3.eth.getBalance("0x8F619572f50a5f49AD72e43983F9eF87d6C9064e")
     }).then((balance)=> res.send(balance))
     //res.send('light')
 });

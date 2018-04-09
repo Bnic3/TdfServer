@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+var rek = require('rekuire');
 
 var cors = require('cors');// origins
 
@@ -15,6 +16,7 @@ var loader = require('route-bootloader');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var transactRouter = require('./routes/transaction');
+var riderRouter = rek('riders');
 
 var app = express();
 
@@ -39,6 +41,7 @@ app.use(cors({origin: '*'}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/transact', transactRouter);
+app.use('/riders', riderRouter);
 //loader(app);
 
 
