@@ -5,8 +5,9 @@ var rek = require("rekuire"),
     Schema = mongoose.Schema;
 
     var RiderSchema = new Schema({
-        eid: {type:Number,required: true, unique:true},
+        rid: {type:Number,required: true, unique:true},
         team: String,
+        bib:String,
         first_name: String,
         lastname_name: String,
         stats_url: String,
@@ -28,6 +29,11 @@ var rek = require("rekuire"),
     
     });
   
+    RiderSchema.plugin(autoIncrement.plugin,{
+        model:"Rider",
+        field:'rid',
+        startAt:1,
+        incrementBy:1});
     // namedtuple('Rider_stat',
     //    'team, bib, first_name, last_name, 
     // stats_url, img, dobd, doby, country, weight, height,pcs_rank, uci_rank,pbs_day,pbs_gc, pbs_tt,pbs_sprint')

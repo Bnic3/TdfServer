@@ -12,8 +12,9 @@ var cors = require('cors');// origins
 
 var loader = require('route-bootloader');
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var transactRouter = require('./routes/transaction');
 
 var app = express();
 
@@ -35,10 +36,11 @@ app.use(cors({origin: '*'}));
 
 
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-loader(app);
-var rek = require("rekuire");
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/transact', transactRouter);
+//loader(app);
+
 
 
 
