@@ -26,18 +26,10 @@ before((done)=>{
 
 
 describe('Test Broker', ()=>{
-    
-    //console.log(createAccount())
-    // var accounts = createAccount(2)
-    // address1= accounts[0].address;
-    // address2= accounts[1].address;
-    // console.log(accounts)
-
+  
     it("it should have a connected node", ()=>{
         console.log(coinbaseAddress)
         expect(1).to.equals(1)
     })
-
-
 
 });

@@ -9,6 +9,7 @@ var rek = require("rekuire"),
         cid: {type:Number,required: true, unique:true},
         stake:{type: Number, default:0 },
         own_team:{type: Schema.Types.ObjectId, ref: 'Team'},
+        no_contenders:{type: Number, default: 1},
         duration:Number
 
     });

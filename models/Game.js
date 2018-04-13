@@ -10,7 +10,10 @@ var rek = require("rekuire"),
         loot:{type: Number, default:0 },
         own_team:{type: Schema.Types.ObjectId, ref: 'Team'},
         away_team:{type: Schema.Types.ObjectId, ref: 'Team'},
-        winner: {type: Schema.Types.ObjectId, ref: 'Team'}
+        winner: {type: Schema.Types.ObjectId, ref: 'Team'},
+        create_date: {type:Date, default: Date.now },
+        exp_date: Date,
+        processed:{type:Boolean, default: false}
 
     });
   
