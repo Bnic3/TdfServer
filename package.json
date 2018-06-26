@@ -22,7 +22,7 @@
     "http-errors": "~1.6.2",
     "ini": "^1.3.4",
     "jade": "~1.11.0",
-    "jsonwebtoken": "^7.4.3",
+    "jsonwebtoken": "^8.2.1",
     "lodash": "4.17.4",
     "mocha": "^5.0.5",
     "moment": "2.18.1",
@@ -32,6 +32,6 @@
     "morgan": "~1.9.0",
     "rekuire": "^0.1.9",
     "route-bootloader": "^1.0.3",
-    "web3": "^1.0.0-beta.33"
+    "web3": "1.0.0-beta.30"
   }
 }

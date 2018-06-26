@@ -16,7 +16,8 @@ var loader = require('route-bootloader');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var transactRouter = require('./routes/transaction');
-var riderRouter = rek('riders');
+
+var riderRouter = rek('riderseed');
 
 var app = express();
 
